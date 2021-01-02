@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: papyrus, copperplate, sans-serif;
+
+}
+.website{
+  text-align: center;
+  font-size: 70;
+  margin: 20px;
+  background-color: lightcyan;
+  color: #333;
+  text-decoration-line: overline;
+  text-decoration-style: wavy
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  background-color: lightcyan;
+  color: black;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a.login {
+  background-color: #333;
+  color: white;
+  float: right;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.mendropdown, .womendropdown, .childdropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.mendropdown .mendropbtn, .womendropdown .womendropbtn, .childdropdown .childdropbtn  {
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .mendropdown:hover .mendropbtn, .womendropdown:hover .womendropbtn, .childdropdown:hover .childdropbtn {
+  background-color: white;
+  color: #333;
+}
+
+.mendropdown-content, .womendropdown-content, .childdropdown-content  {
+  display: none;
+  font-size: 18px;
+  position: absolute;
+  background-color: white;
+  color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.mendropdown-content a, .womendropdown-content a, .childdropdown-content a {
+  float: none;
+  font-size: 18px;
+  background-color: white;
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.mendropdown-content a:hover, .womendropdown-content a:hover, .childdropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.mendropdown:hover .mendropdown-content, .womendropdown:hover .womendropdown-content, .childdropdown:hover .childdropdown-content {
+  display: block;
+}
+
+
+* {
+  box-sizing: border-box
+}
+
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 75%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #C0C0C0;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: red
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="website"> UI-ABHI CLOTHING</h1>
+
+<div class="navbar">
+  <a href="#home">HOME</a>
+  <a href="#login" class="login">LOG IN</a>
+
+  <div class="mendropdown">
+    <button class="mendropbtn">MEN</button>
+    <div class="mendropdown-content">
+      <a href="#">TOPWEAR</a>
+      <a href="#">BOTTOMWEAR</a>
+      <a href="#">ACCESSORIES</a>
+    </div>
+  </div>
+
+  <div class="womendropdown">
+    <button class="womendropbtn">WOMEN</button>
+    <div class="womendropdown-content">
+      <a href="#">TOPWEAR</a>
+      <a href="#">BOTTOMWEAR</a>
+      <a href="#">ACCESSROIES</a>
+    </div>
+  </div>
+
+  <div class="childdropdown">
+    <button class="childdropbtn">CHILDREN</button>
+    <div class="childdropdown-content">
+      <a href="#">TOPWEAR</a>
+      <a href="#">BOTTOMWEAR</a>
+      <a href="#">ACCESSORIES</a>
+    </div>
+  </div>
+</div>
+  <br><br>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img1.png" style="width:100%">
+      <div class="text">DESIGNER CLOTHES</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img1.png" style="width:100%">
+      <div class="text">WOMEN SPECIAL</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img1.png" style="width:100%">
+      <div class="text">CHILDREN SPECIAL</div>
+    </div>
+  </div>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
